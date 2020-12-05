@@ -44,10 +44,10 @@ public class Tracker {
         return rsl;
     }
 
-    private int indexOf(int id) {
+    public int indexOf(int id) {
         int rsl = -1;
         for (int index = 0; index < size; index++) {
-            if (items[index].getId() == id) {
+            if (items[index] != null && items[index].getId() == id) {
                 rsl = index;
                 break;
             }
@@ -62,6 +62,15 @@ public class Tracker {
             return true;
         } else
             return false;
+    }
+
+    public boolean delete(int id) {
+        int index = indexOf(id);
+        if(index != -1) {
+            System.arraycopy(items, index + 1, items, index, size - 1 - index);
+            items[size - 1] = null;
+            return true;
+        } else return false;
     }
 
 }
