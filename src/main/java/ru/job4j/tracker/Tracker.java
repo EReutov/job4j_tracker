@@ -27,14 +27,13 @@ public class Tracker {
                 rsl[size++] = items[i];
             }
         }
-        rsl = Arrays.copyOf(rsl, size);
-        return rsl;
+        return Arrays.copyOf(rsl, size);
     }
 
     public Item[] findByName(String key) {
         Item[] rsl = items;
         int size = 0;
-        for (int i = 0; i < items.length; i++) {
+        for (int i = 0; i < this.size; i++) {
             Item item = items[i];
             if (item != null && item.getName().equals(key)) {
                 rsl[size++] = items[i];
