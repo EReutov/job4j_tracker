@@ -43,14 +43,13 @@ public class TrackerTest {
     @Test
     public void whenDelete2() {
         Tracker tracker = new Tracker();
-        Item one = new Item();
-        one.setName("one");
-        Item two = new Item();
-        one.setName("two");
+        Item one = new Item("one");
+        Item two = new Item("two");
         tracker.add(one);
         tracker.add(two);
         int id = one.getId();
         tracker.delete(id);
-        assertThat(tracker.indexOf(2), is(0));
+        Item[] items = tracker.findAll();
+        assertThat(items[0].getName(), is("two"));
     }
 }
