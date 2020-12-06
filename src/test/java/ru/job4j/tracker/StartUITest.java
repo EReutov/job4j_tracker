@@ -15,8 +15,9 @@ public class StartUITest {
         Tracker tracker = new Tracker();
         StartUI.createItem(input, tracker);
         StartUI.createItem(input, tracker);
-        Item created1 = tracker.findAll()[0];
-        Item created2 = tracker.findAll()[1];
+        Item[] items = tracker.findAll();
+        Item created1 = items[0];
+        Item created2 = items[1];
         Item expected1 = new Item("Fix PC");
         Item expected2 = new Item("Install Windows");
         assertThat(created1.getName(), is(expected1.getName()));
