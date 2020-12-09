@@ -100,8 +100,8 @@ public class StartUITest {
                         "0. Found by name" + System.lineSeparator() +
                         "1. Exit" + System.lineSeparator() +
                         "==== Found items by enter name ====" + System.lineSeparator() +
-                        "Item{id=1, name='One', created=" + item.getCreated() + "}" +
-                        System.lineSeparator() + "Menu." + System.lineSeparator() +
+                        item + System.lineSeparator() +
+                        "Menu." + System.lineSeparator() +
                         "0. Found by name" + System.lineSeparator() +
                         "1. Exit" + System.lineSeparator()
 
@@ -126,8 +126,8 @@ public class StartUITest {
                         "0. Show all" + System.lineSeparator() +
                         "1. Exit" + System.lineSeparator() +
                         "==== Show all items ====" + System.lineSeparator() +
-                        "Item{id=1, name='One', created=" + item.getCreated() + "}" +
-                        System.lineSeparator() + "Menu." + System.lineSeparator() +
+                        item + System.lineSeparator() +
+                        "Menu." + System.lineSeparator() +
                         "0. Show all" + System.lineSeparator() +
                         "1. Exit" + System.lineSeparator()
 
