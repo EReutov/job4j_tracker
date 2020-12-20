@@ -9,7 +9,9 @@ public class UniqueText {
         String[] text = duplicateText.split(" ");
         HashSet<String> check = new HashSet<>(Arrays.asList(origin));
         for (String s : text) {
-            if (!check.contains(s)) return false;
+            if (!check.contains(s)) {
+                return false;
+            }
         }
         return true;
     }
